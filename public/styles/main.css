@@ -1,0 +1,103 @@
+/* VARIABLES */
+:root {
+    --primary-color: #282c34;
+    --secondary-color: #2c313c;
+    --field-color: #3a3f4b;
+    --button-color: #3f51b5;
+    --link-color: #82abff;
+    --text-color: #ffffff;
+}
+
+/* ICONS */
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(/fonts/material_icons.woff2) format('woff2');
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
+
+/* BODY */
+body {
+    background-color: var(--secondary-color);
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: var(--text-color);
+}
+
+/* RESPONSIVE COLUMN */
+.responsive {
+    height: 1px;
+}
+
+/* HEADER ELEMENT */
+header {
+    background-color: var(--primary-color);
+}
+
+/* BUTTONS */
+.w3-btn {
+    background-color: var(--button-color)!important;
+    color: var(--text-color)!important;
+}
+
+/* MENU BUTTONS */
+.menu {
+    background-color: var(--primary-color)!important;
+    color: var(--text-color)!important;
+    font-size: 20px;
+    position: absolute;
+    left: 0;
+}
+
+.menu:focus, .menu:hover {
+    background-color: var(--primary-color)!important;
+    color: var(--text-color)!important;
+}
+
+.menu i {
+    vertical-align: middle;
+}
+
+/* LINKS */
+a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+/* INPUT FIELDS */
+input, select {
+    background-color: var(--field-color);
+    color: var(--text-color);
+}
+
+input:focus, select:focus, button:focus {
+    outline: none;
+}
+
+.w3-check {
+    width: 22px;
+    height: 22px;
+    margin: 3px;
+}
+
+/* IMAGES */
+
+img {
+    max-width: 100%;
+}

@@ -1,0 +1,35 @@
+{
+    "not_found": {
+        "title": "Pagina non trovata",
+        "name": "Errore",
+        "text": "La pagina che stai cercando non esiste..."
+    },
+    "portal": {
+        "title": "Accesso richiesto",
+        "name": "Accedi",
+        "description": "Effettua l'accesso per continuare a navigare!",
+        "username": "Nome utente o indirizzo e-mail",
+        "password": "Password",
+        "check": "Resta connesso",
+        "login": "Accedi",
+        "new_user": "Non hai un account?",
+        "register": "Registrati!"
+    },
+    "register": {
+        "title": "Nuovo account",
+        "name": "Registrazione",
+        "username": "Nome utente",
+        "email": "Indirizzo e-mail",
+        "password": "Password",
+        "repeat": "Ripeti la password",
+        "check": "Accetto i termini generali",
+        "register": "Registrati",
+        "already": "Hai gia' un account?",
+        "login": "Accedi!"
+    },
+    "error": {
+        "title": "Accesso fallito",
+        "name": "Errore",
+        "text": "Impossibile effettuare l'accesso..."
+    }
+}

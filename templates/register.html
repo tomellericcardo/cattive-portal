@@ -1,0 +1,18 @@
+{% extends 'main.html' %}
+
+{% block content %}
+<p>{{ page.description }}</p>
+<form method="POST" action="/login">
+    <input type="hidden" id="type" name="type" value="REGISTER">
+    <input type="text" id="username" name="username" placeholder="{{ page.username }}" class="w3-input" required>
+    <input type="email" id="email" name="email" placeholder="{{ page.email }}" class="w3-input" required>
+    <input type="password" id="password" name="password" placeholder="{{ page.password }}" class="w3-input" required>
+    <input type="password" id="repeat" name="repeat" placeholder="{{ page.repeat }}" class="w3-input" required>
+    <input type="checkbox" id="check" class="w3-check w3-small" required>
+    <label for="check" class="w3-label">{{ page.check }}</label>
+    <input type="submit" value="{{ page.register }}" class="w3-btn w3-round w3-card w3-right">
+</form>
+<div class="w3-center w3-margin-top">
+    <p>{{ page.already }} <a href="/portal">{{ page.login }}</a></p>
+</div>
+{% endblock %}

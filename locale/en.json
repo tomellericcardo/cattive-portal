@@ -1,0 +1,35 @@
+{
+    "not_found": {
+        "title": "Page not found",
+        "name": "Error",
+        "text": "The page you were looking for does not exist..."
+    },
+    "portal": {
+        "title": "Login required",
+        "name": "Login",
+        "description": "Login to access the network!",
+        "username": "Username or e-mail address",
+        "password": "Password",
+        "check": "Remember me",
+        "login": "Login",
+        "new_user": "New user?",
+        "register": "Register a new account!"
+    },
+    "register": {
+        "title": "New account",
+        "name": "Register",
+        "username": "Username",
+        "email": "E-mail address",
+        "password": "Password",
+        "repeat": "Repeat password",
+        "check": "I accept the terms of use",
+        "register": "Register",
+        "already": "Already have an account?",
+        "login": "Login!"
+    },
+    "error": {
+        "title": "Login failed",
+        "name": "Error",
+        "text": "Login failed"
+    }
+}

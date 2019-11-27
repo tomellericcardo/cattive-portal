@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang }}">
+    <head>
+
+        <title>{{ page.title }}</title>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+        <!-- THEME & ICON -->
+        <link rel="icon" type="image/png" sizes="192x192" href="/images/icon.png">
+        <meta name="theme-color" content="#282c34">
+
+        <!-- STYLES -->
+        <link rel="stylesheet" href="/styles/w3.css">
+        <link rel="stylesheet" href="/styles/main.css">
+        {% block styles %}
+        {% endblock %}
+
+    </head>
+    <body>
+
+        <!-- HEADER -->
+        <header class="w3-container w3-card w3-center">
+
+            <!-- BACK BUTTON -->
+            {% if back %}
+            <button class="w3-button menu" onclick="history.back()">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            {% endif %}
+
+            <!-- TITLE -->
+            <h1 class="w3-xxlarge">{{ page.name }}</h1>
+
+        </header>
+
+        <!-- PAGE CONTENT -->
+        <div class="w3-third responsive"></div>
+        <div class="w3-third w3-container">
+            {% block content %}
+            {% endblock %}
+        </div>
+
+        <!-- SCRIPTS -->
+        {% block scripts %}
+        {% endblock %}
+
+    </body>
+</html>
