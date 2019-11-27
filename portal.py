@@ -17,7 +17,7 @@ app = Flask(
 directory = dirname(abspath(__file__))
 config_file = join(directory, 'portal.conf')
 locale_file = join(join(directory, 'locale'), '%s.json')
-config_file = join(directory, 'credentials.csv')
+credentials = join(directory, 'credentials.csv')
 app.config.from_pyfile(config_file)
 
 
@@ -58,7 +58,7 @@ def save_credentials(form):
     username += ':' + email if email else ''
     password = form.get('password')
     repeat = form.get('repeat')
-    f = open(credentials_file, 'a')
+    f = open(credentials, 'a')
     f.write("%s,%s,%s,%s\n" % (
         type,
         username,
