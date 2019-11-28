@@ -1,11 +1,10 @@
 /* VARIABLES */
 :root {
-    --primary-color: #282c34;
-    --secondary-color: #2c313c;
-    --field-color: #3a3f4b;
-    --button-color: #3f51b5;
-    --link-color: #82abff;
-    --text-color: #ffffff;
+    --field-color: #dcdcdc;
+    --button-color: #125cf5;
+    --button-text-color: #ffffff;
+    --link-color: #125cf5;
+    --text-color: #000000;
 }
 
 /* ICONS */
@@ -34,44 +33,39 @@
 
 /* BODY */
 body {
-    background-color: var(--secondary-color);
+    background-image: url('/images/background.png');
+    background-repeat: repeat;
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     color: var(--text-color);
 }
 
-/* RESPONSIVE COLUMN */
-.responsive {
-    height: 1px;
+/* PORTAL */
+.portal {
+    box-shadow: 0px 0px 56px -10px rgba(0,0,0,0.75);
+    border-radius: 10px;
+    position: fixed;
+    width: 300px;
+    left: 0;
+    right: 0;
+    margin: 7% auto;
 }
 
-/* HEADER ELEMENT */
-header {
-    background-color: var(--primary-color);
+/* ICON */
+img {
+    width: 45px;
 }
 
 /* BUTTONS */
 .w3-btn {
     background-color: var(--button-color)!important;
-    color: var(--text-color)!important;
+    color: var(--button-text-color)!important;
 }
 
-/* MENU BUTTONS */
-.menu {
-    background-color: var(--primary-color)!important;
-    color: var(--text-color)!important;
-    font-size: 20px;
-    position: absolute;
-    left: 0;
-}
-
-.menu:focus, .menu:hover {
-    background-color: var(--primary-color)!important;
-    color: var(--text-color)!important;
-}
-
-.menu i {
-    vertical-align: middle;
+.submit {
+    margin-top: 10px;
+    width: 100%;
+    border-radius: 20px;
 }
 
 /* LINKS */

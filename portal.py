@@ -37,11 +37,9 @@ def send_page(page):
         page_content = app.config['LOCALE'][page]
     except:
         return redirect('/portal')
-    back = page != 'portal'
     return render_template(
         '%s.html' % page,
-        page = page_content,
-        back = back
+        page = page_content
     )
 
 

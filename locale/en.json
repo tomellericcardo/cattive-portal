@@ -25,6 +25,7 @@
     "error": {
         "title": "Login failed",
         "name": "Error",
-        "text": "Login failed"
+        "text": "Login failed",
+        "back": "Return to the home page"
     }
 }

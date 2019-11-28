@@ -12,7 +12,7 @@
     },
     "register": {
         "title": "Nuovo account",
-        "name": "Registrazione",
+        "name": "Registrati",
         "username": "Nome utente",
         "email": "Indirizzo e-mail",
         "password": "Password",
@@ -25,6 +25,7 @@
     "error": {
         "title": "Accesso fallito",
         "name": "Errore",
-        "text": "Impossibile effettuare l'accesso..."
+        "text": "Impossibile effettuare l'accesso...",
+        "back": "Torna alla pagine principale"
     }
 }
