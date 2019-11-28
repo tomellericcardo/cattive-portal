@@ -1,9 +1,4 @@
 {
-    "not_found": {
-        "title": "Pagina non trovata",
-        "name": "Errore",
-        "text": "La pagina che stai cercando non esiste..."
-    },
     "portal": {
         "title": "Accesso richiesto",
         "name": "Accedi",

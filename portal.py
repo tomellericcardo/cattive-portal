@@ -36,8 +36,7 @@ def send_page(page):
     try:
         page_content = app.config['LOCALE'][page]
     except:
-        page = 'not_found'
-        page_content = app.config['LOCALE'][page]
+        return redirect('/portal')
     back = page != 'portal'
     return render_template(
         '%s.html' % page,

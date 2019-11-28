@@ -1,9 +1,4 @@
 {
-    "not_found": {
-        "title": "Page not found",
-        "name": "Error",
-        "text": "The page you were looking for does not exist..."
-    },
     "portal": {
         "title": "Login required",
         "name": "Login",
