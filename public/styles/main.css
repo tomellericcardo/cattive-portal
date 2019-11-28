@@ -52,7 +52,7 @@ body {
 }
 
 /* ICON */
-img {
+.portal img {
     width: 45px;
 }
 
@@ -90,8 +90,21 @@ input:focus, select:focus, button:focus {
     margin: 3px;
 }
 
-/* IMAGES */
+/* WAIT */
+.wait {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
 
-img {
-    max-width: 100%;
+.wait img {
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    top: 50%;
+    left: 50%;
+    margin-top: -125px;
+    margin-left: -125px;
 }

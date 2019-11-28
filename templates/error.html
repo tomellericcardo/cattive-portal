@@ -4,3 +4,22 @@
 <p>{{ page.text }}</p>
 <p><a href="/portal">{{ page.back }}</a></p>
 {% endblock %}
+
+{% block wait %}
+<div class="w3-white wait">
+    <img src="/images/wait.gif">
+</div>
+
+<script>
+
+    document.addEventListener('DOMContentLoaded', function() {
+        var t = setTimeout(function() {
+            var w = document.querySelector('.wait');
+            w.style.display = 'none';
+        }, 3000);
+    });
+
+</script>
+
+</script>
+{% endblock %}

