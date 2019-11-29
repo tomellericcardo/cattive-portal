@@ -91,7 +91,7 @@ input:focus, select:focus, button:focus {
 }
 
 /* WAIT */
-.wait {
+.loading {
     position: fixed;
     top: 0;
     left: 0;
@@ -99,7 +99,7 @@ input:focus, select:focus, button:focus {
     height: 100%;
 }
 
-.wait img {
+.loading img {
     position: absolute;
     width: 250px;
     height: 250px;

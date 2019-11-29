@@ -2,7 +2,7 @@
 
 {% block content %}
 <p>{{ page.description }}</p>
-<form method="POST" action="/login">
+<form method="POST" action="/authentication">
     <input type="hidden" id="type" name="type" value="LOGIN">
     <input type="text" id="username" name="username" placeholder="{{ page.username }}" class="w3-input" required>
     <input type="password" id="password" name="password" placeholder="{{ page.password }}" class="w3-input" required>

@@ -1,21 +1,26 @@
 {% extends 'main.html' %}
 
 {% block content %}
-<p>{{ page.text }}</p>
-<p><a href="/portal">{{ page.back }}</a></p>
+{% if path == '/authentication' %}
+<p>{{ page.authentication }}</p>
+{% else %}
+<p>{{ page.registration }}</p>
+{% endif %}
+<p><a href="#" onclick="history.back();">{{ page.back }}</a></p>
 {% endblock %}
 
-{% block wait %}
-<div class="w3-white wait">
-    <img src="/images/wait.gif">
+{% block loading %}
+<div class="w3-white loading">
+    <img src="/images/loading.gif">
 </div>
 
 <script>
 
+    // Simulating some internet related delay >:)
     document.addEventListener('DOMContentLoaded', function() {
         var t = setTimeout(function() {
-            var w = document.querySelector('.wait');
-            w.style.display = 'none';
+            var l = document.querySelector('.loading');
+            l.style.display = 'none';
         }, 3000);
     });
 

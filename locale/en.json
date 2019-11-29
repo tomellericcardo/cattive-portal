@@ -25,7 +25,8 @@
     "error": {
         "title": "Login failed",
         "name": "Error",
-        "text": "Login failed",
-        "back": "Return to the home page"
+        "authentication": "You have entered an invalid username or password.",
+        "registration": "There was an error while creating your account.",
+        "back": "Return to the previuos page"
     }
 }

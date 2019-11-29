@@ -25,7 +25,8 @@
     "error": {
         "title": "Accesso fallito",
         "name": "Errore",
-        "text": "Impossibile effettuare l'accesso...",
-        "back": "Torna alla pagine principale"
+        "authentication": "Nome utente o password non corretti.",
+        "registration": "Impossibile effettuare la registrazione.",
+        "back": "Torna alla pagina precedente"
     }
 }

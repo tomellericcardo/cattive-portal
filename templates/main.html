@@ -8,14 +8,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
         <!-- THEME & ICON -->
-        <link rel="icon" type="image/png" sizes="192x192" href="/images/icon64.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="/images/icon.png">
         <meta name="theme-color" content="#ffffff">
 
         <!-- STYLES -->
         <link rel="stylesheet" href="/styles/w3.css">
         <link rel="stylesheet" href="/styles/main.css">
-        {% block styles %}
-        {% endblock %}
 
     </head>
     <body>
@@ -24,7 +22,7 @@
             <div class="w3-center">
                 <h1>
                     {{ page.name }}
-                    <img src="/images/icon64.png">
+                    <img src="/images/icon.png">
                 </h1>
             </div>
             <div class="w3-container">
@@ -33,7 +31,7 @@
             </div>
         </div>
 
-        {% block wait %}
+        {% block loading %}
         {% endblock %}
 
     </body>
