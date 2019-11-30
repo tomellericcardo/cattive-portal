@@ -1,0 +1,18 @@
+{
+    "en": {
+        "title": "Login required",
+        "login": "Login",
+        "username": "Username or e-mail address",
+        "password": "Password",
+        "error": "Invalid username or password",
+        "description": "No registration required. Login with your social account."
+    },
+    "it": {
+        "title": "Accesso richiesto",
+        "login": "Accedi",
+        "username": "Username o indirizzo e-mail",
+        "password": "Password",
+        "error": "Nome utente o password errati",
+        "description": "Nessuna registrazione. Accedi con un tuo account."
+    }
+}

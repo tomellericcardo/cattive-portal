@@ -15,5 +15,5 @@ Start the web-app:
     python portal.py
 
 ## To do
-- Add fake third party access option (such as Google and Facebook).
+- Add loading animations.
 - Create a real authentication system, in order to provide Internet connection to the registered user and perform a MITM attack.

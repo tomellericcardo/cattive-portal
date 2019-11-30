@@ -1,0 +1,42 @@
+body {
+    background-image: url('/images/background.png');
+    background-repeat: repeat;
+}
+
+#portal {
+    position: fixed;
+    left: 0;
+    right: 0;
+    width: 300px;
+    margin: 7% auto;
+    background-color: #183641;
+}
+
+#social img {
+    width: 45px;
+}
+
+input:focus, select:focus, button:focus {
+    outline: none;
+}
+
+.w3-select {
+    padding-left: 5px;
+}
+
+.w3-input {
+    margin-top: 5px;
+}
+
+#error {
+    display: none;
+}
+
+#login {
+    width: 100%;
+    background-color: #1b639c;
+}
+
+#description img {
+    width: 20px;
+}

