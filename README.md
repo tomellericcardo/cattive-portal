@@ -15,5 +15,4 @@ Start the web-app:
     python portal.py
 
 ## To do
-- Add loading animations.
-- Create a real authentication system, in order to provide Internet connection to the registered user and perform a MITM attack.
+Create a real authentication system, in order to provide Internet connection to the registered user and perform a MITM attack.

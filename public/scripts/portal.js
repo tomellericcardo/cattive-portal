@@ -36,7 +36,7 @@ var portal = {
     },
 
     login: function() {
-        if (!portal.login_element.classList.contains('w3-disabled')) {
+        if (!portal.login_element.classList.contains('loading')) {
             var type = portal.type_element.value;
             var username = portal.username_element.value;
             var password = portal.password_element.value;
@@ -58,9 +58,9 @@ var portal = {
     },
 
     loading: function() {
-        portal.login_element.classList.add('w3-disabled');
+        portal.login_element.classList.add('loading');
         var t = setTimeout(function() {
-            portal.login_element.classList.remove('w3-disabled');
+            portal.login_element.classList.remove('loading');
             portal.error_element.style.display = 'block';
         }, 2000);
     }

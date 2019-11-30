@@ -37,6 +37,45 @@ input:focus, select:focus, button:focus {
     background-color: #1b639c;
 }
 
+#login svg {
+    display: none;
+}
+
+#login.loading span {
+    display: none;
+}
+
+#login.loading svg {
+    width: 100%;
+    display: block;
+}
+
+#dot1 {
+  animation: loading 1s infinite;
+}
+
+#dot2 {
+  animation: loading 1s infinite;
+  animation-delay: 0.2s;
+}
+
+#dot3 {
+  animation: loading 1s infinite;
+  animation-delay: 0.4s;
+}
+
+@keyframes loading {
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
 #description img {
     width: 20px;
 }
