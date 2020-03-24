@@ -1,5 +1,5 @@
 echo "Installing dependencies ..."
-apt update
+apt update -y && apt upgrade -y
 apt install dnsmasq hostapd python-pip -y
 pip install flask
 
